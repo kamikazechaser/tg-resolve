@@ -1,4 +1,3 @@
-[![](https://img.shields.io/npm/dt/rangi.svg?style=flat-square)](https://www.npmjs.com/package/rangi)
 [![https://telegram.me/kamikazechaser](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-kamikazechaser-blue.svg?style=flat-square)](https://telegram.me/kamikazechaser)
 [![https://github.com/kamikazechaser/rangi/blob/master/LICENSE.md](https://img.shields.io/badge/license-MIT-lightgreen.svg?style=flat-square)](https://github.com/kamikazechaser/rangi/blob/master/LICENSE)
 > 👤 tg-resolve
