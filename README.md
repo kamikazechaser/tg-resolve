@@ -17,7 +17,7 @@ npm i tg-resolve -S
 ```javascript
 var resUser = require(tg-resolve);
 
-resUser('kamikazechaser, function(err, u){
+resUser('kamikazechaser', function(err, u){
   console.log(u);
   
   /* A JSON Object Is Returned
