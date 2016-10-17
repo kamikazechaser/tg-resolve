@@ -7,6 +7,17 @@ A light Node.js Library that reolves Telegram usernames and/or ids to a complete
 
 > Powered by pwrtelegramapi
 
+## Background
+
+The official Telegram API does not allow bots to resolve usernames/ids out of the box. One is forced to create his/her own database so as to resolve usernames. Resolving of usernames is particularly useful in that a bot is able to get a user/chat id of a person or groub it hasn't even seen! Unlike before where a bot is only able to see a person if it has ever recieved his/her message whether in private or in a group.
+
+### Useful Scenarios
+
+- Group Administration Bots
+- Bot Which Has Lost Its Database, but users had previously started the bot
+- Resolving Group/Channel Ids
+- And Much More!
+
 ## Install
 
 ```bash
