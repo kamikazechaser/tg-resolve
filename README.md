@@ -3,7 +3,7 @@
 [![https://github.com/kamikazechaser/rangi/blob/master/LICENSE.md](https://img.shields.io/badge/license-MIT-lightgreen.svg?style=flat-square)](https://github.com/kamikazechaser/rangi/blob/master/LICENSE)
 > 👤 tg-resolve
 
-A light Node.js Library that reolves Telegram usernames and/or ids to a complete User or/and Chat JSON object(s)
+A light Node.js Library that resolves Telegram usernames and/or ids to a complete User or/and Chat JSON object(s)
 
 > Powered by pwrtelegramapi
 
