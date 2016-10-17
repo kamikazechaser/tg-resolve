@@ -1,0 +1,22 @@
+{
+  "name": "tg-resolve",
+  "version": "1.0.0",
+  "description": "Resolves Telegram usernames and/or ids to a complete User or/and Chat JSON object(s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },    
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamikazechaser/tg-resolve"
+  },
+  "author": "Mohammed Sohail <sohailsameja@gmail.com>",
+  "license": "MIT"    
+  },
+  "keywords": [
+    "telegram",
+    "resolve"
+  ],
+  "dependencies": {
+    "request": "^2.75.0"
+}
