@@ -16,7 +16,7 @@ The official Telegram API **does not** allow bots to resolve usernames/ids out o
 ## Useful Scenarios
 
 - Group administration bots
-- BIn a bot which has lost its database, but users had previously started the bot
+- In a bot which has lost its database, but users had previously started the bot
 - General resolving to get user details e.g [UResolverBot](https://telegram.me/UResolverBot)
 - And much more!
 
