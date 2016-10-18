@@ -1,7 +1,7 @@
 [![](https://img.shields.io/npm/dt/tg-resolve.svg?style=flat-square)](https://www.npmjs.com/package/tg-resolve)
 [![https://telegram.me/kamikazechaser](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-kamikazechaser-blue.svg?style=flat-square)](https://telegram.me/kamikazechaser)
 [![https://github.com/kamikazechaser/rangi/blob/master/LICENSE.md](https://img.shields.io/badge/license-MIT-lightgreen.svg?style=flat-square)](https://github.com/kamikazechaser/rangi/blob/master/LICENSE)
-[![Dependency Status](https://img.shields.io/david/kamikazechaser/tg-resolve.svg?style=flat-square)](https://david-dm.org/kamikazechaser/tg-resolve)
+[![Gemnasium](https://img.shields.io/gemnasium/kamikazechaser/tg-resolve.svg?style=flat-square)](https://gemnasium.com/kamikazechaser/tg-resolve)
 [![https://telegram.me/UResolverBot](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-TheResolverBot-blue.svg?style=flat-square)](https://telegram.me/UResolverBot)
 > 👤 tg-resolve
 
