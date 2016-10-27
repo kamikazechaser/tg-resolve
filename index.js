@@ -29,13 +29,14 @@ var resUser = module.exports = function (chatId, callback) {
         uri: url + token + '/' + method + '?' + type + '=' + chatId,
         json: true
     }, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            var result = body && body.result;
-            if(result)callback(error, result);
-            else callback(new Error('Username not found'));
+        if (error) {
+            callback(error);
+        }
+        if (response.statusCode == 200 && body && body.result != undefined ) {
+            callback(error, body.result);
         }
         else{
-            callback(error)
+            callback(new Error('Username not found'));
         }
     });
 }
