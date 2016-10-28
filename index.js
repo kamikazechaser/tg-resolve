@@ -36,7 +36,8 @@ var resUser = module.exports = function (chatId, callback) {
             callback(error, body.result);
         }
         else{
-            callback(new Error('Username not found'));
+            error=new Error('Username not found')
+            callback(error);
         }
     });
 }
