@@ -1,11 +1,11 @@
 /***
- * tg-resolve 
+ * tg-resolve
  *
  * A light Node.js Library that resolves Telegram usernames and/or ids to a complete User or/and Chat JSON object(s)
  *
  * Mohammed Sohail <sohailsameja@gmail.com>
  *
- * Released Under MIT License 
+ * Released Under MIT License
  *
  ***/
 
@@ -29,8 +29,15 @@ var resUser = module.exports = function (chatId, callback) {
         uri: url + token + '/' + method + '?' + type + '=' + chatId,
         json: true
     }, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            callback(error, body && body.result)
+        if (error) {
+            callback(error);
+        }
+        if (response.statusCode == 200 && body && body.result != undefined ) {
+            callback(error, body.result);
+        }
+        else{
+            error=new Error('Username not found')
+            callback(error);
         }
     });
 }
