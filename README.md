@@ -31,16 +31,7 @@ npm i tg-resolve -S
 
 _Refer to [example.js](https://github.com/kamikazechaser/tg-resolve/blob/master/example.js) for a more comprehensive guide_
 
-```javascript
-var resUser = require(tg-resolve);
-
-resUser('@kamikazechaser', function(err, u){
-  console.log(u);
-  
-  // A JSON Object Is Returned
-  
-});
-```
+- As of v1.2.0, you will need your own bot token!
 
 ## JSON Object Structure
 

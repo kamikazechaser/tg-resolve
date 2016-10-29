@@ -1,6 +1,6 @@
 {
   "name": "tg-resolve",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Resolves Telegram usernames and/or ids to a complete User or/and Chat JSON object(s)",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,16 @@
   ],
   "dependencies": {
     "request": "^2.76.0"
-  }
+  },
+  "contributors": [
+    {
+      "name": "gochomugo",
+      "email": "mugo@forfuture.co.ke",
+      "url": "https://github.com/GochoMugo"
+    },
+    {
+      "name": "OOP",
+      "url": "https://github.com/op01"
+    }
+  ]
 }
