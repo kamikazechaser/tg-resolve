@@ -6,12 +6,12 @@
  ***/
 
 
-const token = process.env.TELEGRAM_TOKEN;
+const token = '262278980:AAE_2pmNjBs09JAr1L5YFWB6Mtsef48cQxI'
 if (!token) {
     console.error("Error: Telegram token missing");
     process.exit(1);
 }
-const username = process.env.TELEGRAM_USERNAME;
+const username = 135207785
 if (!username) {
     console.error("Error: Telegram username missing");
     process.exit(1);

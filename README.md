@@ -2,7 +2,7 @@
 [![https://telegram.me/kamikazechaser](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-kamikazechaser-blue.svg?style=flat-square)](https://telegram.me/kamikazechaser)
 [![https://github.com/kamikazechaser/rangi/blob/master/LICENSE.md](https://img.shields.io/badge/license-MIT-lightgreen.svg?style=flat-square)](https://github.com/kamikazechaser/rangi/blob/master/LICENSE)
 [![Gemnasium](https://img.shields.io/gemnasium/kamikazechaser/tg-resolve.svg?style=flat-square)](https://gemnasium.com/kamikazechaser/tg-resolve)
-[![https://telegram.me/UResolverBot](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-TheResolverBot-blue.svg?style=flat-square)](https://telegram.me/UResolverBot)
+[![Travis](https://img.shields.io/travis/kamikazechaser/tg-resolve.svg?style=flat-square)](https://travis-ci.org/kamikazechaser/tg-resolve)
 > 👤 tg-resolve
 
 A light Node.js Library that resolves Telegram usernames and/or ids to a complete User or/and Chat JSON object(s)
