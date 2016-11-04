@@ -50,7 +50,7 @@ var tgresolve = module.exports = function (token, chatId, options, callback) {
 }
 
 
-tgresolve.Tgresolve = function Tgresolve(token, options={}) {
+tgresolve.Tgresolve = function Tgresolve(token, options) {
     this.token = token;
     this.options = Object.assign({
         url,
