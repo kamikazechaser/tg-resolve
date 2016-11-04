@@ -30,6 +30,7 @@ npm i tg-resolve -S
 _Refer to [example.js](https://github.com/kamikazechaser/tg-resolve/blob/master/example.js) for a more comprehensive guide_
 
 - As of v1.2.0, you will need your own bot token!
+- As of v1.3.0, you can pass in your own pwrtg url!
 
 ## JSON Object Structure
 
