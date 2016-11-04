@@ -16,12 +16,13 @@ if (!username) {
     console.error("Error: Telegram username missing");
     process.exit(1);
 }
+const url = process.env.PWRTELEGRAM_URL;
 const tgresolve = require(".");
-const tgresolver = new tgresolve.Tgresolve(token);
+const tgresolver = new tgresolve.Tgresolve(token, { url });
 
 
 // using the bare function
-tgresolve(token, username, function(error, user) {
+tgresolve(token, username, { url }, function(error, user) {
     if (error) {
         console.error("Error (bare): %s\n%j", error, error);
         return;

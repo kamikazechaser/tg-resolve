@@ -15,15 +15,22 @@ var request = require('request');
 
 // API Constants
 
-var url = 'https://api.pwrtelegram.xyz/bot'
+var url = 'https://api.pwrtelegram.xyz'
 var method = 'getChat'
 var type = 'chat_id'
 
 // Resolver Function
 
-var tgresolve = module.exports = function (token, chatId, callback) {
+var tgresolve = module.exports = function (token, chatId, options, callback) {
+    if (!callback) {
+        callback = options;
+        options = {};
+    }
+
+    options.url = options.url || url;
+
     request({
-        uri: url + token + '/' + method + '?' + type + '=' + chatId,
+        uri: options.url + '/bot' + token + '/' + method + '?' + type + '=' + chatId,
         json: true
     }, function (error, response, body) {
         if (error) {
@@ -43,11 +50,14 @@ var tgresolve = module.exports = function (token, chatId, callback) {
 }
 
 
-tgresolve.Tgresolve = function Tgresolve(token) {
+tgresolve.Tgresolve = function Tgresolve(token, options) {
     this.token = token;
+    this.options = Object.assign({
+        url,
+    }, options);
 };
 
 
 tgresolve.Tgresolve.prototype.tgresolve = function (chatId, callback) {
-    return tgresolve(this.token, chatId, callback);
+    return tgresolve(this.token, chatId, this.options, callback);
 };
