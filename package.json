@@ -17,7 +17,7 @@
     "resolve"
   ],
   "dependencies": {
-    "request": "^2.78.0"
+    "request": "^2.79.0"
   },
   "contributors": [
     {
