@@ -1,13 +1,11 @@
 [![](https://img.shields.io/npm/dt/tg-resolve.svg?style=flat-square)](https://www.npmjs.com/package/tg-resolve)
 [![https://telegram.me/kamikazechaser](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-kamikazechaser-blue.svg?style=flat-square)](https://telegram.me/kamikazechaser)
-[![https://github.com/kamikazechaser/rangi/blob/master/LICENSE.md](https://img.shields.io/badge/license-MIT-lightgreen.svg?style=flat-square)](https://github.com/kamikazechaser/rangi/blob/master/LICENSE)
-[![Gemnasium](https://img.shields.io/gemnasium/kamikazechaser/tg-resolve.svg?style=flat-square)](https://gemnasium.com/kamikazechaser/tg-resolve)
-[![https://telegram.me/UResolverBot](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-TheResolverBot-blue.svg?style=flat-square)](https://telegram.me/UResolverBot)
+[![Travis](https://img.shields.io/travis/kamikazechaser/tg-resolve.svg?style=flat-square)](https://travis-ci.org/kamikazechaser/tg-resolve)
 > 👤 tg-resolve
 
 A light Node.js Library that resolves Telegram usernames and/or ids to a complete User or/and Chat JSON object(s)
 
-> Powered by pwrtelegramapi
+> Powered by [PWRTelegram API](http://pwrtelegram.xyz/)
 
 ## Background
 
@@ -24,51 +22,95 @@ The official Telegram API **does not** allow bots to resolve usernames/ids out o
 ## Install
 
 ```bash
-npm i tg-resolve -S
+$ npm install tg-resolve --save
 ```
 
 ## Usage
 
-_Refer to [example.js](https://github.com/kamikazechaser/tg-resolve/blob/master/example.js) for a more comprehensive guide_
+```js
+const tgresolve = require("tg-resolve");
 
-```javascript
-var resUser = require(tg-resolve);
+// using the 'bare' function
+tgresolve(token, "@kamikazechaser", function(error, result) {
+    // ... handle error ...
+    console.log(result.id);
+});
 
-resUser('@kamikazechaser', function(err, u){
-  console.log(u);
-  
-  // A JSON Object Is Returned
-  
+// you can create a client (referred to as 'resolver')
+// that you can repeatedly use
+const resolver = new tgresolver.Tgresolve(token);
+
+// using the 'resolver'
+resolver.tgresolve("@kamikazechaser", function(error, result) {
+    // ... handle error ...
+    console.log(result.id);
 });
 ```
 
-## JSON Object Structure
+_Refer to [example.js](https://github.com/kamikazechaser/tg-resolve/blob/master/example.js) for a more comprehensive guide_
+
+- As of v1.2.0, you will need your own bot token!
+- As of v1.3.0, you can pass in your own pwrtg url!
+
+
+<a name="above-main"></a>
+#### tgresolve(token, username[, options], callback)
+
+Resolve the `username` to a [Result](#result).
+
+* **token** (String): Telegram bot token
+* **username** (String)
+* **options** (Object, Optional)
+    * **url** (String): custom [PWRTelegram API](http://pwrtelegram.xyz/) URL
+* **callback** (Function):
+    * signature: `callback(error, result)`
+
+
+#### resolver = new tgresolve.Tgresolve(token[, options])
+
+Create a client/resolver.
+
+* **token** (String): Telegram bot token
+* **options** (Object, Optional): same as [above](#above-main)
+
+
+#### resolver.tgresolve(username, callback)
+
+Resolve the `username` to a [Result](#result), using the client.
+
+* **username** (String)
+* **callback** (Function): same as [above](#above-main)
+
+
+<a name="result"></a>
+## Result
 
 _When resolving for a Group/Channel_
 
-```javascript
+```js
 {
-id: -1001065761006,
-title: "End Of The World Party",
-username: "EOTWGroup",
-type: "supergroup",
-when: "2016-10-18 11:22:56"
+    id: -1001065761006,
+    title: "End Of The World Party",
+    username: "EOTWGroup",
+    type: "supergroup",
+    when: "2016-10-18 11:22:56"
 }
-
 ```
 
 _When resolving for a User_
 
-```javascript
+```js
 {
-id: 58258161,
-first_name: "John",
-username: "john_doe",
-type: "private",
-last_name: "Doe",
-when: "2016-10-18 11:22:56"
+    id: 58258161,
+    first_name: "John",
+    username: "john_doe",
+    type: "private",
+    last_name: "Doe",
+    when: "2016-10-18 11:22:56"
 }
 ```
+
+
 ## Issues And Contribution
 
 Fork the repository and submit a pull request for whatever change you want to be added to this project. If you have any questions, just open an issue.
