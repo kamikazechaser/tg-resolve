@@ -38,7 +38,7 @@ tgresolve(token, "@kamikazechaser", function(error, result) {
 
 // you can create a client (referred to as 'resolver')
 // that you can repeatedly use
-const resolver = new tgresolver.Tgresolve(token);
+const resolver = new tgresolve.Tgresolve(token);
 
 // using the 'resolver'
 resolver.tgresolve("@kamikazechaser", function(error, result) {
